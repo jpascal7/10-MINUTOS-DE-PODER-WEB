@@ -6,21 +6,40 @@
   <title>10 Minutos de Poder — Jaime Pascal</title>
   <meta name="description" content="E-book '10 Minutos de Poder' — espiritualidad secular práctica para transformar estrés en claridad y energía en 30 días. Descarga capítulo gratis o compra ahora." />
   <meta name="author" content="Jaime Pascal" />
+  
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:title" content="10 Minutos de Poder — Jaime Pascal">
+<meta property="og:description" content="Espiritualidad secular práctica para transformar estrés en claridad y energía en 30 días. Descarga capítulo gratis o compra ahora.">
+<meta property="og:image" content="https://jpascal7.github.io/10-MINUTOS-DE-PODER/mockup.jpg">
+<meta property="og:url" content="https://jpascal7.github.io/10-MINUTOS-DE-PODER/">
+<meta property="og:type" content="website">
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="10 Minutos de Poder — Jaime Pascal">
+<meta name="twitter:description" content="Espiritualidad secular práctica para transformar estrés en claridad y energía en 30 días.">
+<meta name="twitter:image" content="https://jpascal7.github.io/10-MINUTOS-DE-PODER/mockup.jpg">
+
+<!-- Color de la barra del navegador en móvil -->
+<meta name="theme-color" content="#0f2f4b">
 
   <!-- Favicons (opcional) -->
   <!-- <link rel="icon" href="/assets/favicon.ico"> -->
 
   <style>
     :root{
-      --bg:#faf7f2; /* crema suave */
-      --accent:#0f2f4b; /* azul profundo */
-      --gold:#c79a3a; /* dorado suave */
-      --muted:#6b6b6b;
-      --card:#ffffff;
-      --maxw:1100px;
-      --radius:12px;
-      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
-    }
+  --bg:#eaf3ff;          /* azul pastel cielo */
+  --accent:#0f2f4b;      /* azul profundo para títulos y botones */
+  --muted:#3b556b;       /* gris azulado para textos secundarios */
+  --card:#ffffff;
+  --maxw:1100px;
+  --radius:12px;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+}   /* Ajustes de contraste sobre fondo pastel */
+.badge{ background: rgba(255,255,255,0.9); color: var(--accent); }
+.btn.secondary{ background:#fff; color:var(--accent); border:2px solid rgba(15,47,75,0.16); }
+.card, .tile{ background:#fff; } /* mantiene tarjetas blancas nítidas */                                                                                             
+  
 
     html,body{height:100%;margin:0;background:var(--bg);color:var(--accent)}
     .wrap{max-width:var(--maxw);margin:28px auto;padding:28px;}
@@ -65,6 +84,42 @@
 
     /* small screens tweaks */
     .subtle{color:var(--muted);font-size:13px}
+    
+    /* Galería en el hero: portada + mockup */
+.mockups{ flex-wrap: wrap; } /* permite saltar de línea en pantallas pequeñas */
+.mockups img.portada{ width:220px; }
+.mockups img.mock{ width:420px; max-width:100%; }
+
+@media (max-width:900px){
+  .mockups{ flex-direction:column; }
+  .mockups img.portada{ width:60%; }
+  .mockups img.mock{ width:100%; }
+}
+
+    /* Tamaño del mockup en el hero */
+.mockups img.mock{ width:420px; max-width:100%; border-radius:12px; }
+@media (max-width:900px){
+  .mockups img.mock{ width:100%; }
+}
+
+    /* Tipografía fluida */
+h1{ font-size: clamp(28px, 5vw, 44px); }
+p.lead{ font-size: clamp(15px, 1.8vw, 18px); }
+
+/* Asegurar imágenes siempre dentro del contenedor */
+img{ max-width:100%; height:auto; }
+
+/* Botones: a lo ancho en móviles */
+@media (max-width:600px){
+  .wrap{ padding: 20px; }
+  .cta-row .btn{ width:100%; text-align:center; }
+}
+
+/* Secciones en 1 columna en pantallas pequeñas (por si no se aplicó ya) */
+@media (max-width:700px){
+  .split{ grid-template-columns:1fr; }
+  .grid3{ grid-template-columns:1fr; }
+}
 
   </style>
 </head>
@@ -104,10 +159,9 @@
         <div class="card" aria-hidden="false">
           <!-- Mockup: reemplaza las rutas por tus imágenes reales -->
           <div class="mockups">
-            <img src="/assets/cover-book-vertical.png" alt="Portada 10 Minutos de Poder" style="width:220px">
-          </div>
-          <p class="subtle" style="margin-top:12px">Portada real — mockup editorial</p>
-        </div>
+  <img class="mock" src="./mockup.png" alt="Mockup del libro 10 Minutos de Poder en varios formatos" loading="lazy">
+</div>
+<p class="subtle" style="margin-top:12px">Mockup editorial del libro</p>
 
         <div class="card" style="padding:14px;">
           <p style="margin:0;font-weight:700">Autor: Jaime Pascal</p>
@@ -208,3 +262,5 @@
 
 </body>
 </html>
+
+ 
