@@ -25,18 +25,17 @@
 
   <style>
     :root{
-      --bg:#EAF3FF;
-      --text:#0F2F4B;
-      --muted:#3B556B;
-      --card:#FFFFFF;
-      --primary:#8B5CF6;
-      --primary2:#60A5FA;
+      --bg:#EAF3FF;      /* pastel azulado */
+      --text:#0F2F4B;    /* azul profundo */
+      --muted:#3B556B;   /* gris azulado */
+      --card:#FFFFFF;    /* tarjetas */
+      --primary:#8B5CF6; /* morado acento */
+      --primary2:#60A5FA;/* celeste acento */
       --maxw:1140px;
       --radius:14px;
 
-      /* CTA azul oscuro activo */
-      --cta-alt:#0B2545;
-      --cta: var(--cta-alt);
+      /* CTA azul oscuro */
+      --cta:#0B2545;
       --cta-hover:#09304e;
     }
     *{box-sizing:border-box}
@@ -72,7 +71,7 @@
     }
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
     h1,h2,h3{font-family:"Bebas Neue",Inter;letter-spacing:.04em;margin:0 0 12px}
-    h1{font-size:clamp(36px,6vw,64px);text-transform:uppercase;line-height:1}
+    h1{font-size:clamp(40px,7vw,72px);text-transform:uppercase;line-height:1}
     p.lead{margin:10px 0 18px;color:var(--muted);font-size:clamp(16px,2.2vw,18px)}
     .eyebrow{display:inline-block;background:#ffffffc9;border:1px solid #e5edf9;color:var(--text);padding:6px 12px;border-radius:999px;font-weight:600;font-size:13px}
     .cta-group{display:flex;gap:12px;flex-wrap:wrap}
@@ -90,17 +89,26 @@
     .pain li{margin:10px 0;color:var(--muted)}
     .chapters li{margin:8px 0}
 
-    /* Slider testimonios (scroll-snap) */
+    /* Carrusel testimonios */
     .snap{display:flex;gap:14px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
     .snap::-webkit-scrollbar{height:8px}
     .snap::-webkit-scrollbar-thumb{background:#cfd8e6;border-radius:999px}
     .snap .card{scroll-snap-align:start;min-width:280px;flex:0 0 320px}
 
-    /* Garantía, pagos */
-    .guarantee{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:linear-gradient(90deg, rgba(139,92,246,.10), rgba(96,165,250,.10));border:1px dashed rgba(15,47,75,.18);border-radius:16px;padding:18px}
-    .pay-logos{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
-    .logo-svg{height:28px}
-    .badge-7{height:72px}
+    /* Garantía y pagos */
+    .guarantee{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:linear-gradient(90deg, rgba(245,158,11,.12), rgba(253,230,138,.12));border:1px dashed rgba(15,47,75,.18);border-radius:16px;padding:18px}
+    .pay-logos{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:14px}
+    .logo-svg{height:64px;filter:drop-shadow(0 4px 12px rgba(15,47,75,.18))} /* MÁS GRANDES Y LLAMATIVOS */
+
+    /* Badge 7 días con brillo */
+    .badge-wrap{position:relative;width:180px;height:180px;display:flex;align-items:center;justify-content:center}
+    .badge-wrap::before{
+      content:"";position:absolute;inset:-12px;border-radius:50%;
+      background:radial-gradient(closest-side, rgba(253,230,138,.65), rgba(245,158,11,.28) 60%, transparent 70%);
+      filter:blur(10px);opacity:.7;animation:pulse 3.2s ease-in-out infinite;z-index:0
+    }
+    .badge-7{width:180px;height:180px;display:block;position:relative;z-index:1}
+    @keyframes pulse{0%,100%{transform:scale(.98);opacity:.55}50%{transform:scale(1.04);opacity:.9}}
 
     /* CTA móvil fija */
     .sticky-cta{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;padding:14px 22px;border-radius:999px;background:var(--cta);color:#fff;text-decoration:none;font-weight:900;box-shadow:0 16px 40px rgba(15,47,75,.25);display:none;text-align:center}
@@ -110,13 +118,6 @@
       .grid-3{grid-template-columns:1fr}
       .grid-2{grid-template-columns:1fr}
       .sticky-cta{display:inline-flex}
-    }
-
-    /* Botón: versión corta en móvil */
-    .btn-buy .short{display:none}
-    @media (max-width:520px){
-      .btn-buy .full{display:none}
-      .btn-buy .short{display:inline}
     }
 
     footer{border-top:1px solid #e5edf9;color:var(--muted);font-size:14px;padding:36px 0;text-align:center}
@@ -137,10 +138,7 @@
         <a href="#contenido">Contenido</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#faq">FAQ</a>
-        <a href="#comprar" class="btn btn-buy js-buy">
-          <span class="full">ELEVA LA ENERGIA DE TU VIDA EN 10 MINUTOS AL DIA</span>
-          <span class="short">ELEVA TU ENERGIA EN 10 MIN</span>
-        </a>
+        <a href="#comprar" class="btn btn-buy js-buy">COMPRAR AHORA</a>
       </nav>
     </div>
   </header>
@@ -150,13 +148,10 @@
     <div class="container hero-grid">
       <div>
         <span class="eyebrow">E‑book • Rutina de 10 minutos</span>
-        <h1>ELEVA TU ENERGÍA EN 10 MINUTOS AL DÍA</h1>
+        <h1>10 MINUTOS DE PODER</h1>
         <p class="lead">Método práctico para transformar estrés en claridad y presencia en 30 días. Herramientas breves, aplicables y medibles para profesionales y emprendedores.</p>
         <div class="cta-group">
-          <a class="btn btn-buy js-buy" href="#comprar">
-            <span class="full">ELEVA LA ENERGIA DE TU VIDA EN 10 MINUTOS AL DIA</span>
-            <span class="short">ELEVA TU ENERGIA EN 10 MIN</span>
-          </a>
+          <a class="btn btn-buy js-buy" href="#comprar">COMPRAR AHORA</a>
         </div>
         <div class="trust"><span>Pago seguro</span> • <span>Acceso inmediato</span> • <span>Soporte por email</span></div>
       </div>
@@ -166,7 +161,7 @@
     </div>
   </section>
 
-  <!-- Portada -->
+  <!-- Portada destacada -->
   <section class="section" style="padding-top:24px">
     <div class="container grid-2" style="align-items:center">
       <div class="tile">
@@ -176,10 +171,7 @@
         <h2 style="text-transform:uppercase;margin:0 0 8px">Una guía clara y medible</h2>
         <p class="muted">Incluye tablas de seguimiento, rutinas express (3–5 min) y una versión completa (10 min). Pensado para personas con poco tiempo que necesitan resultados.</p>
         <div style="margin-top:12px">
-          <a class="btn btn-buy js-buy" href="#comprar">
-            <span class="full">ELEVA LA ENERGIA DE TU VIDA EN 10 MINUTOS AL DIA</span>
-            <span class="short">ELEVA TU ENERGIA EN 10 MIN</span>
-          </a>
+          <a class="btn btn-buy js-buy" href="#comprar">COMPRAR AHORA</a>
         </div>
       </div>
     </div>
@@ -196,15 +188,28 @@
         <li>Quieres una guía simple, secular, que funcione en minutos.</li>
       </ul>
       <div class="guarantee" style="margin-top:16px">
-        <!-- Sello garantía 7 días (SVG) -->
-        <svg class="badge-7" viewBox="0 0 120 120" xmlns="http://www.w3.org/2000/svg" aria-label="Garantía 7 días">
-          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#8B5CF6"/><stop offset="1" stop-color="#60A5FA"/></linearGradient></defs>
-          <circle cx="60" cy="60" r="56" fill="url(#g)" opacity="0.18" />
-          <circle cx="60" cy="60" r="50" fill="#fff" stroke="#BBD0EA" stroke-width="2"/>
-          <text x="60" y="48" text-anchor="middle" font-family="Inter" font-weight="700" font-size="22" fill="#0F2F4B">7 DÍAS</text>
-          <text x="60" y="70" text-anchor="middle" font-family="Inter" font-size="10" fill="#3B556B">GARANTÍA</text>
-          <text x="60" y="86" text-anchor="middle" font-family="Inter" font-size="9" fill="#3B556B">SATISFACCIÓN</text>
-        </svg>
+        <!-- Sello garantía 7 días (dorado + brillo) -->
+        <div class="badge-wrap" aria-hidden="true">
+          <svg class="badge-7" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" aria-label="Garantía 7 días">
+            <defs>
+              <radialGradient id="goldRad" cx="50%" cy="50%" r="50%">
+                <stop offset="0" stop-color="#FFF7D6"/>
+                <stop offset="1" stop-color="#FDE68A"/>
+              </radialGradient>
+              <linearGradient id="goldRing" x1="0" x2="1">
+                <stop offset="0" stop-color="#F59E0B"/>
+                <stop offset="0.5" stop-color="#FDE68A"/>
+                <stop offset="1" stop-color="#F59E0B"/>
+              </linearGradient>
+            </defs>
+            <circle cx="90" cy="90" r="83" fill="url(#goldRad)"/>
+            <circle cx="90" cy="90" r="79" fill="#fff" stroke="url(#goldRing)" stroke-width="7"/>
+            <circle cx="90" cy="90" r="59" fill="#fff" stroke="url(#goldRing)" stroke-width="5" opacity=".95"/>
+            <text x="90" y="86" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="#0F2F4B">7 DÍAS</text>
+            <text x="90" y="112" text-anchor="middle" font-family="Inter" font-weight="700" font-size="16" fill="#1F2937">GARANTÍA</text>
+            <text x="90" y="132" text-anchor="middle" font-family="Inter" font-size="13" fill="#374151">SATISFACCIÓN</text>
+          </svg>
+        </div>
         <p class="muted" style="margin:0">Prueba el método 7 días. Si no te aporta claridad o energía, te ayudamos a ajustar el protocolo o gestionamos reembolso según la plataforma de pago.</p>
       </div>
     </div>
@@ -219,7 +224,7 @@
     </div>
   </section>
 
-  <!-- Contenido + Bonos (visibles) -->
+  <!-- Contenido + Bonos -->
   <section class="section" style="padding-top:0">
     <div class="container grid-2">
       <div class="tile">
@@ -275,22 +280,44 @@
         <h3 style="text-transform:uppercase;margin:0 0 8px">Obtén el e‑book ahora</h3>
         <p class="muted">Acceso inmediato + bonos. El enlace de checkout se activará cuando definas Hotmart o Amazon.</p>
         <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn btn-buy js-buy" href="#">
-            <span class="full">ELEVA LA ENERGIA DE TU VIDA EN 10 MINUTOS AL DIA</span>
-            <span class="short">ELEVA TU ENERGIA EN 10 MIN</span>
-          </a>
+          <a class="btn btn-buy js-buy" href="#">COMPRAR AHORA</a>
         </div>
 
-        <!-- Logos de pago (SVGs inline) -->
-        <div class="pay-logos" style="margin-top:14px">
-          <svg class="logo-svg" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" aria-label="SSL">
-            <rect x="12" y="26" width="40" height="30" rx="6" fill="#0F2F4B" opacity=".9"/>
-            <path d="M20 26v-6a12 12 0 0 1 24 0v6h-6v-6a6 6 0 1 0-12 0v6h-6z" fill="#8B5CF6"/>
+        <!-- Logos de pago GRANDES (SVG inline) -->
+        <div class="pay-logos">
+          <!-- SSL -->
+          <svg class="logo-svg" viewBox="0 0 104 64" xmlns="http://www.w3.org/2000/svg" aria-label="SSL">
+            <rect x="16" y="22" width="72" height="36" rx="10" fill="#0F2F4B"/>
+            <path d="M28 22v-7a24 24 0 0 1 48 0v7h-10v-7a14 14 0 1 0-28 0v7H28z" fill="#8B5CF6"/>
+            <text x="52" y="49" text-anchor="middle" font-family="Inter" font-weight="800" font-size="16" fill="#fff">SSL</text>
           </svg>
-          <svg class="logo-svg" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" aria-label="Visa"><rect width="80" height="28" rx="6" fill="#1A1F2B"/><text x="40" y="19" fill="#fff" font-family="Inter" font-weight="800" font-size="14" text-anchor="middle">VISA</text></svg>
-          <svg class="logo-svg" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard"><rect width="80" height="28" rx="6" fill="#1A1F2B"/><circle cx="34" cy="14" r="8" fill="#EB001B"/><circle cx="46" cy="14" r="8" fill="#F79E1B" opacity=".9"/><text x="60" y="19" fill="#fff" font-family="Inter" font-size="10" font-weight="700">MC</text></svg>
-          <svg class="logo-svg" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" aria-label="PayPal"><rect width="80" height="28" rx="6" fill="#1A1F2B"/><text x="40" y="19" fill="#fff" font-family="Inter" font-weight="800" font-size="14" text-anchor="middle">PayPal</text></svg>
-          <svg class="logo-svg" viewBox="0 0 80 28" xmlns="http://www.w3.org/2000/svg" aria-label="Stripe"><rect width="80" height="28" rx="6" fill="#1A1F2B"/><text x="40" y="19" fill="#fff" font-family="Inter" font-weight="800" font-size="14" text-anchor="middle">Stripe</text></svg>
+          <!-- VISA -->
+          <svg class="logo-svg" viewBox="0 0 160 64" xmlns="http://www.w3.org/2000/svg" aria-label="Visa">
+            <rect width="160" height="64" rx="14" fill="#1A1F71"/>
+            <text x="80" y="41" fill="#fff" font-family="Inter" font-weight="900" font-size="32" text-anchor="middle">VISA</text>
+          </svg>
+          <!-- Mastercard -->
+          <svg class="logo-svg" viewBox="0 0 160 64" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard">
+            <rect width="160" height="64" rx="14" fill="#1B1B1B"/>
+            <circle cx="70" cy="32" r="18" fill="#EB001B"/>
+            <circle cx="90" cy="32" r="18" fill="#F79E1B" opacity=".92"/>
+            <text x="120" y="40" fill="#fff" font-family="Inter" font-weight="800" font-size="14">MC</text>
+          </svg>
+          <!-- PayPal -->
+          <svg class="logo-svg" viewBox="0 0 160 64" xmlns="http://www.w3.org/2000/svg" aria-label="PayPal">
+            <defs>
+              <linearGradient id="ppg" x1="0" x2="1">
+                <stop offset="0" stop-color="#003087"/><stop offset="1" stop-color="#009CDE"/>
+              </linearGradient>
+            </defs>
+            <rect width="160" height="64" rx="14" fill="url(#ppg)"/>
+            <text x="80" y="41" fill="#fff" font-family="Inter" font-weight="900" font-size="28" text-anchor="middle">PayPal</text>
+          </svg>
+          <!-- Stripe -->
+          <svg class="logo-svg" viewBox="0 0 160 64" xmlns="http://www.w3.org/2000/svg" aria-label="Stripe">
+            <rect width="160" height="64" rx="14" fill="#635BFF"/>
+            <text x="80" y="41" fill="#fff" font-family="Inter" font-weight="900" font-size="28" text-anchor="middle">Stripe</text>
+          </svg>
         </div>
       </div>
       <div class="tile">
@@ -307,10 +334,7 @@
   </footer>
 
   <!-- CTA móvil fija -->
-  <a class="sticky-cta js-buy" href="#comprar" aria-label="Comprar ahora">
-    <span class="full">ELEVA LA ENERGIA DE TU VIDA EN 10 MINUTOS AL DIA</span>
-    <span class="short">ELEVA TU ENERGIA EN 10 MIN</span>
-  </a>
+  <a class="sticky-cta js-buy" href="#comprar" aria-label="Comprar ahora">COMPRAR AHORA</a>
 
   <script>
     // Enlace de pago (pendiente hasta que lo tengas)
