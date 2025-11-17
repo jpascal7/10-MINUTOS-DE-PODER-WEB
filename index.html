@@ -4,329 +4,320 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>10 Minutos de Poder — Jaime Pascal</title>
-  <meta name="description" content="E‑book 10 Minutos de Poder: método práctico de 10 minutos al día para transformar estrés en claridad y energía en 30 días. Compra ahora." />
+  <meta name="description" content="10 Minutos de Poder: práctica secular de 10 minutos al día para transformar estrés en claridad y energía en 30 días. E-book con rutinas, checklist y plan de 30 días." />
   <meta name="author" content="Jaime Pascal" />
   <meta name="theme-color" content="#0F2F4B" />
 
   <!-- Open Graph / Twitter -->
   <meta property="og:title" content="10 Minutos de Poder — Jaime Pascal">
-  <meta property="og:description" content="Espiritualidad secular práctica para transformar estrés en claridad y energía en 30 días.">
-  <meta property="og:image" content="https://jpascal7.github.io/10-MINUTOS-DE-PODER-WEB/cover-book-vertical.png">
+  <meta property="og:description" content="Eleva tu claridad, energía y enfoque con un ritual de 10 minutos al día. Método práctico, secular y medible en 30 días.">
+  <meta property="og:image" content="https://jpascal7.github.io/10-MINUTOS-DE-PODER-WEB/estecover-book-vertical.png">
   <meta property="og:url" content="https://jpascal7.github.io/10-MINUTOS-DE-PODER-WEB/">
   <meta property="og:type" content="website">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="10 Minutos de Poder — Jaime Pascal">
   <meta name="twitter:description" content="Método de 10 minutos al día para enfocar tu energía con intención.">
-  <meta name="twitter:image" content="https://jpascal7.github.io/10-MINUTOS-DE-PODER-WEB/cover-book-vertical.png">
+  <meta name="twitter:image" content="https://jpascal7.github.io/10-MINUTOS-DE-PODER-WEB/estecover-book-vertical.png">
+
+  <!-- Structured Data (Book) -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Book",
+    "name":"10 Minutos de Poder",
+    "author":{"@type":"Person","name":"Jaime Pascal"},
+    "description":"Espiritualidad secular práctica: transforma estrés en claridad y energía en 30 días con rutinas de 3-10 minutos.",
+    "image":"https://jpascal7.github.io/10-MINUTOS-DE-PODER-WEB/estecover-book-vertical.png",
+    "inLanguage":"es"
+  }
+  </script>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   <style>
     :root{
-      --bg:#EAF3FF;      /* pastel azulado */
-      --text:#0F2F4B;    /* azul profundo */
-      --muted:#3B556B;   /* gris azulado */
-      --card:#FFFFFF;    /* tarjetas */
-      --primary:#8B5CF6; /* morado acento */
-      --primary2:#60A5FA;/* celeste acento */
-      --maxw:1140px;
+      --bg:#F7FAFD;
+      --accent:#0F2F4B;
+      --muted:#3B556B;
+      --card:#FFFFFF;
+      --gold:#F59E0B;
+      --maxw:1100px;
       --radius:14px;
-
-      /* CTA azul oscuro */
       --cta:#0B2545;
       --cta-hover:#09304e;
+      --glass: rgba(255,255,255,0.78);
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial}
+    body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:linear-gradient(180deg,#F8FBFF 0%, #F3F7FB 100%);color:var(--accent);-webkit-font-smoothing:antialiased}
+    a{color:inherit;text-decoration:none}
     img{max-width:100%;height:auto;display:block}
-    a{color:inherit}
 
-    /* Topbar */
-    .topbar{position:sticky;top:0;z-index:40;background:linear-gradient(180deg,#EAF3FF,rgba(234,243,255,.75));backdrop-filter:saturate(1.1) blur(6px);border-bottom:1px solid #e5edf9}
-    .topbar .row{max-width:var(--maxw);margin:auto;padding:12px 20px;display:flex;align-items:center;gap:16px;justify-content:space-between}
-    .logo{font-family:"Bebas Neue",Inter;font-size:28px;letter-spacing:.04em}
-    nav a{text-decoration:none;margin:0 10px;font-weight:600}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:999px;text-decoration:none;font-weight:800;transition:.2s}
-    .btn-buy{color:#fff;background:var(--cta);box-shadow:0 10px 28px rgba(15,47,75,.22)}
-    .btn-buy:hover{background:var(--cta-hover);transform:translateY(-1px)}
-
-    .container{max-width:var(--maxw);margin:auto;padding:0 20px}
+    /* Layout */
+    .topbar{position:sticky;top:0;z-index:60;background:linear-gradient(180deg, rgba(250,250,252,0.9), rgba(250,250,252,0.7));backdrop-filter: blur(6px);border-bottom:1px solid rgba(13,41,69,0.04)}
+    .row{max-width:var(--maxw);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .logo{font-family:"Bebas Neue", Inter; font-size:28px; color:var(--accent); letter-spacing:.02em}
+    nav a{margin:0 10px;font-weight:600;color:var(--accent)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;font-weight:800;cursor:pointer}
+    .btn-buy{background:var(--cta);color:#fff;box-shadow:0 12px 36px rgba(11,38,70,0.14);border:0}
+    .btn-ghost{background:transparent;border:1px solid rgba(11,38,70,0.06);color:var(--accent)}
+    .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
     .section{padding:72px 0}
 
-    /* Hero con estrellas sutiles */
-    .hero{
-      padding:56px 0;
-      background-image:
-        radial-gradient(1px 1px at 20px 30px, rgba(15,47,75,.12) 99%, transparent 100%),
-        radial-gradient(1px 1px at 80px 120px, rgba(15,47,75,.10) 99%, transparent 100%),
-        radial-gradient(1px 1px at 140px 200px, rgba(15,47,75,.10) 99%, transparent 100%),
-        radial-gradient(1px 1px at 220px 60px, rgba(15,47,75,.12) 99%, transparent 100%),
-        radial-gradient(800px 420px at 80% -10%, rgba(139,92,246,.18), transparent 60%),
-        radial-gradient(700px 360px at -10% 110%, rgba(96,165,250,.18), transparent 60%);
-      background-size:240px 240px,240px 240px,240px 240px,240px 240px,auto,auto;
-      background-repeat:repeat,repeat,repeat,repeat,no-repeat,no-repeat;
-    }
+    /* Hero */
+    .hero{padding:56px 0;background-image:
+      radial-gradient(1px 1px at 30px 40px, rgba(15,47,75,.06) 99%, transparent 100%),
+      radial-gradient(1px 1px at 120px 140px, rgba(15,47,75,.04) 99%, transparent 100%),
+      radial-gradient(700px 360px at -10% 110%, rgba(139,92,246,.08), transparent 60%),
+      radial-gradient(800px 420px at 80% -10%, rgba(96,165,250,.06), transparent 60%)}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    h1,h2,h3{font-family:"Bebas Neue",Inter;letter-spacing:.04em;margin:0 0 12px}
-    h1{font-size:clamp(40px,7vw,72px);text-transform:uppercase;line-height:1}
-    p.lead{margin:10px 0 18px;color:var(--muted);font-size:clamp(16px,2.2vw,18px)}
-    .eyebrow{display:inline-block;background:#ffffffc9;border:1px solid #e5edf9;color:var(--text);padding:6px 12px;border-radius:999px;font-weight:600;font-size:13px}
-    .cta-group{display:flex;gap:12px;flex-wrap:wrap}
-    .trust{display:flex;gap:14px;flex-wrap:wrap;margin-top:12px;color:var(--muted);font-size:14px}
+    @media (max-width:920px){ .hero-grid{grid-template-columns:1fr} .row{padding:10px} }
 
-    .mock-card{background:var(--card);border:1px solid #e5edf9;border-radius:var(--radius);padding:16px;box-shadow:0 12px 34px rgba(15,47,75,.08)}
-    .mock{border-radius:12px}
+    h1{font-family:"Bebas Neue", Inter;font-size:clamp(36px,6vw,64px);margin:0;line-height:1;color:var(--accent);text-transform:uppercase}
+    .lead{margin:8px 0 18px;color:var(--muted);font-size:clamp(15px,2vw,17px);max-width:58ch}
+    .eyebrow{display:inline-block;background:var(--glass);border:1px solid rgba(13,41,69,0.04);padding:6px 12px;border-radius:999px;font-weight:700;color:var(--accent);font-size:13px}
 
-    /* Grids y tarjetas */
+    .cta-group{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
+    .trust{margin-top:12px;color:var(--muted);font-size:14px;display:flex;gap:12px;flex-wrap:wrap}
+
+    .mock-card{background:var(--glass);border-radius:var(--radius);padding:18px;border:1px solid rgba(13,41,69,0.06);box-shadow:0 32px 80px rgba(11,28,43,0.06)}
+    .mock{border-radius:10px;display:block}
+
+    /* Tiles and grids */
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-    .tile,.card{background:var(--card);border:1px solid #e5edf9;border-radius:12px;box-shadow:0 6px 18px rgba(15,47,75,.05);padding:18px}
-    .tile h4{margin:0 0 8px}
+    @media (max-width:920px){ .grid-3,.grid-2{grid-template-columns:1fr} }
+
+    .tile{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(11,28,43,0.04);border:1px solid rgba(13,41,69,0.04)}
     .muted{color:var(--muted)}
     .pain li{margin:10px 0;color:var(--muted)}
-    .chapters li{margin:8px 0}
+    .chapters li{margin:8px 0;color:var(--muted)}
 
-    /* Carrusel testimonios */
-    .snap{display:flex;gap:14px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:4px}
-    .snap::-webkit-scrollbar{height:8px}
-    .snap::-webkit-scrollbar-thumb{background:#cfd8e6;border-radius:999px}
+    /* Badge */
+    .badge-wrap{position:relative;width:140px;height:140px;display:flex;align-items:center;justify-content:center}
+    .badge-wrap::before{content:"";position:absolute;inset:-12px;border-radius:50%;background:radial-gradient(closest-side, rgba(253,230,138,.6), rgba(245,158,11,.18) 60%);filter:blur(8px);opacity:.85}
+
+    /* Testimony snap */
+    .snap{display:flex;gap:14px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
     .snap .card{scroll-snap-align:start;min-width:280px;flex:0 0 320px}
 
-    /* Garantía y pagos */
-    .guarantee{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:linear-gradient(90deg, rgba(245,158,11,.12), rgba(253,230,138,.12));border:1px dashed rgba(15,47,75,.18);border-radius:16px;padding:18px}
-    .pay-logos{display:flex;gap:18px;flex-wrap:wrap;align-items:center;margin-top:14px}
-    .logo-svg{height:64px;filter:drop-shadow(0 4px 12px rgba(15,47,75,.18))} /* MÁS GRANDES Y LLAMATIVOS */
+    /* Purchase area */
+    .pay-logos{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:14px}
+    .logo-svg{height:56px;filter:drop-shadow(0 6px 18px rgba(11,28,43,0.08))}
 
-    /* Badge 7 días con brillo */
-    .badge-wrap{position:relative;width:180px;height:180px;display:flex;align-items:center;justify-content:center}
-    .badge-wrap::before{
-      content:"";position:absolute;inset:-12px;border-radius:50%;
-      background:radial-gradient(closest-side, rgba(253,230,138,.65), rgba(245,158,11,.28) 60%, transparent 70%);
-      filter:blur(10px);opacity:.7;animation:pulse 3.2s ease-in-out infinite;z-index:0
-    }
-    .badge-7{width:180px;height:180px;display:block;position:relative;z-index:1}
-    @keyframes pulse{0%,100%{transform:scale(.98);opacity:.55}50%{transform:scale(1.04);opacity:.9}}
+    footer{border-top:1px solid rgba(13,41,69,0.04);padding:36px 0;color:var(--muted);text-align:center;font-size:14px}
 
-    /* CTA móvil fija */
-    .sticky-cta{position:fixed;left:50%;transform:translateX(-50%);bottom:16px;z-index:60;padding:14px 22px;border-radius:999px;background:var(--cta);color:#fff;text-decoration:none;font-weight:900;box-shadow:0 16px 40px rgba(15,47,75,.25);display:none;text-align:center}
-    .sticky-cta:hover{background:var(--cta-hover)}
-    @media (max-width:900px){
-      .hero-grid{grid-template-columns:1fr}
-      .grid-3{grid-template-columns:1fr}
-      .grid-2{grid-template-columns:1fr}
-      .sticky-cta{display:inline-flex}
-    }
+    /* Sticky CTA mobile */
+    .sticky-cta{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:80;padding:12px 22px;border-radius:999px;background:var(--cta);color:#fff;font-weight:900;display:none;box-shadow:0 18px 40px rgba(11,28,43,0.18)}
+    @media (max-width:900px){ .sticky-cta{display:inline-flex} }
 
-    footer{border-top:1px solid #e5edf9;color:var(--muted);font-size:14px;padding:36px 0;text-align:center}
+    /* Accessibility focus */
+    :focus-visible{outline:3px solid rgba(96,165,250,0.18);outline-offset:3px}
 
-    :focus-visible{outline:3px solid var(--primary2);outline-offset:2px}
-    @media (prefers-reduced-motion:reduce){
-      *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
-    }
+    /* small helpers */
+    .divider{height:1px;background:linear-gradient(90deg, rgba(13,41,69,0.04), rgba(13,41,69,0.02));margin:36px auto;border-radius:2px}
   </style>
 </head>
 <body>
 
   <!-- Topbar -->
-  <header class="topbar">
-    <div class="row">
-      <div class="logo">10 Minutos de Poder</div>
-      <nav aria-label="principal">
+  <header class="topbar" role="banner">
+    <div class="row container">
+      <a class="logo" href="/" aria-label="Inicio - 10 Minutos de Poder">10 Minutos de Poder</a>
+      <nav aria-label="Principal">
         <a href="#contenido">Contenido</a>
         <a href="#testimonios">Testimonios</a>
         <a href="#faq">FAQ</a>
-        <a href="#comprar" class="btn btn-buy js-buy">COMPRAR AHORA</a>
+        <button class="btn btn-buy" id="topBuy">COMPRAR AHORA</button>
       </nav>
     </div>
   </header>
 
   <!-- Hero -->
-  <section class="hero">
-    <div class="container hero-grid">
-      <div>
-        <span class="eyebrow">E‑book • Rutina de 10 minutos</span>
-        <h1>10 MINUTOS DE PODER</h1>
-        <p class="lead">Método práctico para transformar estrés en claridad y presencia en 30 días. Herramientas breves, aplicables y medibles para profesionales y emprendedores.</p>
-        <div class="cta-group">
-          <a class="btn btn-buy js-buy" href="#comprar">COMPRAR AHORA</a>
-        </div>
-        <div class="trust"><span>Pago seguro</span> • <span>Acceso inmediato</span> • <span>Soporte por email</span></div>
-      </div>
-      <aside class="mock-card" aria-hidden="false">
-        <img class="mock" src="./mockup.png" alt="Mockup del e‑book 10 Minutos de Poder en libro, tablet y móvil" loading="lazy">
-      </aside>
-    </div>
-  </section>
+  <main>
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container hero-grid">
+        <div>
+          <span class="eyebrow" aria-hidden="true">E-book • Rutina de 10 minutos</span>
+          <h1 id="hero-title" role="heading">10 MINUTOS DE PODER</h1>
+          <p class="lead">Eleva tu claridad, energía y enfoque con un ritual práctico de 10 minutos al día. Resultados medibles en 30 días — para profesionales y emprendedores con poco tiempo.</p>
 
-  <!-- Portada destacada -->
-  <section class="section" style="padding-top:24px">
-    <div class="container grid-2" style="align-items:center">
-      <div class="tile">
-        <img src="./cover-book-vertical.png" alt="Portada del e‑book 10 Minutos de Poder" loading="lazy">
-      </div>
-      <div>
-        <h2 style="text-transform:uppercase;margin:0 0 8px">Una guía clara y medible</h2>
-        <p class="muted">Incluye tablas de seguimiento, rutinas express (3–5 min) y una versión completa (10 min). Pensado para personas con poco tiempo que necesitan resultados.</p>
-        <div style="margin-top:12px">
-          <a class="btn btn-buy js-buy" href="#comprar">COMPRAR AHORA</a>
-        </div>
-      </div>
-    </div>
-  </section>
+          <div class="cta-group" role="group" aria-label="Acciones principales">
+            <button class="btn btn-buy" id="ctaBuy">COMPRAR AHORA</button>
+            <a class="btn btn-ghost" href="#contenido">VER CONTENIDO</a>
+          </div>
 
-  <!-- ¿Te ha pasado esto? + Garantía -->
-  <section class="section" style="padding-top:0">
-    <div class="container">
-      <h2 style="text-transform:uppercase">¿Te ha pasado esto?</h2>
-      <ul class="pain">
-        <li>Empiezas el día en modo automático y terminas con la mente saturada.</li>
-        <li>Te cuesta sostener foco y energía estable durante la jornada.</li>
-        <li>Pruebas hábitos, pero no logras medir avances reales.</li>
-        <li>Quieres una guía simple, secular, que funcione en minutos.</li>
-      </ul>
-      <div class="guarantee" style="margin-top:16px">
-        <!-- Sello garantía 7 días (dorado + brillo) -->
-        <div class="badge-wrap" aria-hidden="true">
-          <svg class="badge-7" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" aria-label="Garantía 7 días">
-            <defs>
-              <radialGradient id="goldRad" cx="50%" cy="50%" r="50%">
-                <stop offset="0" stop-color="#FFF7D6"/>
-                <stop offset="1" stop-color="#FDE68A"/>
-              </radialGradient>
-              <linearGradient id="goldRing" x1="0" x2="1">
-                <stop offset="0" stop-color="#F59E0B"/>
-                <stop offset="0.5" stop-color="#FDE68A"/>
-                <stop offset="1" stop-color="#F59E0B"/>
-              </linearGradient>
-            </defs>
-            <circle cx="90" cy="90" r="83" fill="url(#goldRad)"/>
-            <circle cx="90" cy="90" r="79" fill="#fff" stroke="url(#goldRing)" stroke-width="7"/>
-            <circle cx="90" cy="90" r="59" fill="#fff" stroke="url(#goldRing)" stroke-width="5" opacity=".95"/>
-            <text x="90" y="86" text-anchor="middle" font-family="Inter" font-weight="800" font-size="34" fill="#0F2F4B">7 DÍAS</text>
-            <text x="90" y="112" text-anchor="middle" font-family="Inter" font-weight="700" font-size="16" fill="#1F2937">GARANTÍA</text>
-            <text x="90" y="132" text-anchor="middle" font-family="Inter" font-size="13" fill="#374151">SATISFACCIÓN</text>
-          </svg>
-        </div>
-        <p class="muted" style="margin:0">Prueba el método 7 días. Si no te aporta claridad o energía, te ayudamos a ajustar el protocolo o gestionamos reembolso según la plataforma de pago.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Beneficios -->
-  <section class="section" id="contenido" style="padding-top:0">
-    <div class="container grid-3">
-      <div class="tile"><h4>Resultados en 30 días</h4><p class="muted">Rutinas de 3–10 minutos con seguimiento semanal.</p></div>
-      <div class="tile"><h4>Herramientas seculares</h4><p class="muted">Aplicables a cualquier creencia y estilo de vida.</p></div>
-      <div class="tile"><h4>Medible y práctico</h4><p class="muted">Checklist y tablas para evidenciar avances.</p></div>
-    </div>
-  </section>
-
-  <!-- Contenido + Bonos -->
-  <section class="section" style="padding-top:0">
-    <div class="container grid-2">
-      <div class="tile">
-        <h3 style="text-transform:uppercase;margin-bottom:6px">Contenido del e‑book</h3>
-        <ul class="chapters muted">
-          <li>Introducción: cómo usar el método y medir avances.</li>
-          <li>Cap. 1: Fundamentos de energía y foco.</li>
-          <li>Cap. 2: Rutina de mañana (5–10 minutos).</li>
-          <li>Cap. 3: Pausas activas para la tarde.</li>
-          <li>Cap. 4: Enfoque láser en alta presión.</li>
-          <li>Cap. 5: Reset nocturno y sueño reparador.</li>
-          <li>Cap. 6: Plan de 30 días + checklist.</li>
-        </ul>
-      </div>
-      <div class="tile">
-        <h3 style="text-transform:uppercase;margin-bottom:6px">Bonos incluidos</h3>
-        <ul class="muted">
-          <li>Planificador de 30 días (PDF A4) — Próximamente.</li>
-          <li>Checklist diaria (PDF A4) — Próximamente.</li>
-        </ul>
-        <p class="muted" style="margin-top:8px">Cuando estén listos, los añadimos al paquete de descarga.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Testimonios -->
-  <section class="section" id="testimonios" style="padding-top:0">
-    <div class="container">
-      <h2 style="text-transform:uppercase">Testimonios</h2>
-      <div class="snap" aria-label="Carrusel de testimonios" role="region">
-        <div class="card"><strong>“En 3 semanas bajó mi reactividad y duermo mejor.”</strong><p class="muted" style="margin-top:6px">— Sandra, RR.HH.</p></div>
-        <div class="card"><strong>“Me dio una rutina simple para días exigentes.”</strong><p class="muted" style="margin-top:6px">— Carlos, Finanzas</p></div>
-        <div class="card"><strong>“Lo aplico entre reuniones, me mantiene enfocado.”</strong><p class="muted" style="margin-top:6px">— Andrés, Ventas</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- FAQ -->
-  <section class="section" id="faq" style="padding-top:0">
-    <div class="container">
-      <h2 style="text-transform:uppercase">Preguntas frecuentes</h2>
-      <details><summary>¿Cuánto tiempo requiere?</summary><p class="muted">Entre 3 y 10 minutos al día. El plan propone 30 días para ver cambios acumulativos.</p></details>
-      <details><summary>¿Necesito experiencia previa?</summary><p class="muted">No. Es una guía secular con instrucciones paso a paso.</p></details>
-      <details><summary>¿Cómo recibo el e‑book y los bonos?</summary><p class="muted">Tras la compra, llega un correo con el enlace de descarga inmediata.</p></details>
-      <details><summary>¿Puedo leerlo en el móvil?</summary><p class="muted">Sí, incluye versión optimizada para móvil y PDF imprimible.</p></details>
-    </div>
-  </section>
-
-  <!-- Compra -->
-  <section class="section" id="comprar" style="padding-top:0">
-    <div class="container grid-2">
-      <div class="tile">
-        <h3 style="text-transform:uppercase;margin:0 0 8px">Obtén el e‑book ahora</h3>
-        <p class="muted">Acceso inmediato + bonos. El enlace de checkout se activará cuando definas Hotmart o Amazon.</p>
-        <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
-          <a class="btn btn-buy js-buy" href="#">COMPRAR AHORA</a>
+          <div class="trust" aria-hidden="true">
+            <span>✅ Pago seguro</span> • <span>⚡ Acceso inmediato</span> • <span>✉️ Soporte por email</span>
+          </div>
         </div>
 
-        <!-- Logos de pago GRANDES (SVG inline) -->
-        <div class="pay-logos">
-          <!-- SSL -->
-          <svg class="logo-svg" viewBox="0 0 104 64" xmlns="http://www.w3.org/2000/svg" aria-label="SSL">
-            <rect x="16" y="22" width="72" height="36" rx="10" fill="#0F2F4B"/>
-            <path d="M28 22v-7a24 24 0 0 1 48 0v7h-10v-7a14 14 0 1 0-28 0v7H28z" fill="#8B5CF6"/>
-            <text x="52" y="49" text-anchor="middle" font-family="Inter" font-weight="800" font-size="16" fill="#fff">SSL</text>
-          </svg>
-          <!-- VISA -->
-          <svg class="logo-svg" viewBox="0 0 160 64" xmlns="http://www.w3.org/2000/svg" aria-label="Visa">
-            <rect width="160" height="64" rx="14" fill="#1A1F71"/>
-            <text x="80" y="41" fill="#fff" font-family="Inter" font-weight="900" font-size="32" text-anchor="middle">VISA</text>
-          </svg>
-          <!-- Mastercard -->
-          <svg class="logo-svg" viewBox="0 0 160 64" xmlns="http://www.w3.org/2000/svg" aria-label="Mastercard">
-            <rect width="160" height="64" rx="14" fill="#1B1B1B"/>
-            <circle cx="70" cy="32" r="18" fill="#EB001B"/>
-            <circle cx="90" cy="32" r="18" fill="#F79E1B" opacity=".92"/>
-            <text x="120" y="40" fill="#fff" font-family="Inter" font-weight="800" font-size="14">MC</text>
-          </svg>
-          <!-- PayPal -->
-          <svg class="logo-svg" viewBox="0 0 160 64" xmlns="http://www.w3.org/2000/svg" aria-label="PayPal">
-            <defs>
-              <linearGradient id="ppg" x1="0" x2="1">
-                <stop offset="0" stop-color="#003087"/><stop offset="1" stop-color="#009CDE"/>
-              </linearGradient>
-            </defs>
-            <rect width="160" height="64" rx="14" fill="url(#ppg)"/>
-            <text x="80" y="41" fill="#fff" font-family="Inter" font-weight="900" font-size="28" text-anchor="middle">PayPal</text>
-          </svg>
-          <!-- Stripe -->
-          <svg class="logo-svg" viewBox="0 0 160 64" xmlns="http://www.w3.org/2000/svg" aria-label="Stripe">
-            <rect width="160" height="64" rx="14" fill="#635BFF"/>
-            <text x="80" y="41" fill="#fff" font-family="Inter" font-weight="900" font-size="28" text-anchor="middle">Stripe</text>
-          </svg>
+        <aside class="mock-card" aria-hidden="true">
+          <img class="mock" src="./mockup.png" alt="Mockup del e-book en libro, tablet y móvil" loading="lazy">
+        </aside>
+      </div>
+    </section>
+
+    <!-- Portada destacada -->
+    <section class="section" aria-labelledby="portada-title" style="padding-top:24px">
+      <div class="container grid-2" style="align-items:center">
+        <div class="tile" aria-hidden="false">
+          <img src="./estecover-book-vertical.png" alt="Portada del e-book 10 Minutos de Poder" loading="lazy">
+        </div>
+        <div>
+          <h2 id="portada-title" style="text-transform:uppercase;margin:0 0 8px">Una guía clara y medible</h2>
+          <p class="muted">Incluye tablas de seguimiento, rutinas express (3–5 min) y protocolos completos (10 min). Pensado para personas ocupadas que buscan resultados reales y sostenibles.</p>
+          <div style="margin-top:12px">
+            <button class="btn btn-buy" id="buyAnchor">COMPRAR AHORA</button>
+          </div>
         </div>
       </div>
-      <div class="tile">
-        <img src="./mockup.png" alt="Vista del e‑book 10 Minutos de Poder" loading="lazy">
-      </div>
-    </div>
-  </section>
+    </section>
 
-  <footer>
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <!-- ¿Este e-book es para ti? -->
+    <section class="section">
+      <div class="container">
+        <h2 style="text-transform:uppercase;margin-bottom:12px">Este e-book es para ti si…</h2>
+        <div class="grid-3" style="gap:20px">
+          <div class="tile">
+            <ul class="pain" aria-label="Puntos de dolor">
+              <li>Comienzas el día desenfocado, con la mente saturada.</li>
+              <li>Tu energía cae en la tarde y te cuesta reconectar.</li>
+              <li>Quieres rutinas cortas, sin rituales largos ni dogmas.</li>
+              <li>Buscas resultados medibles y prácticos en 30 días.</li>
+            </ul>
+          </div>
+          <div class="tile">
+            <h4 style="margin-top:0">Qué vas a lograr</h4>
+            <ul class="muted">
+              <li>Mayor claridad mental y toma de decisiones más rápida.</li>
+              <li>Energía sostenida sin depender de estimulantes.</li>
+              <li>Mejor sueño y menor reactividad emocional.</li>
+            </ul>
+          </div>
+          <div class="tile">
+            <h4 style="margin-top:0">Cómo funciona</h4>
+            <p class="muted">Rutinas diarias de 3–10 minutos + seguimiento semanal. Basado en neuroplasticidad dirigida y técnicas prácticas de atención intencional.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Beneficios -->
+    <section class="section" id="contenido" aria-labelledby="beneficios-title">
+      <div class="container">
+        <h2 id="beneficios-title" style="text-transform:uppercase;margin-bottom:12px">Beneficios clave</h2>
+        <div class="grid-3">
+          <div class="tile"><h4>Resultados en 30 días</h4><p class="muted">Rutinas simples con seguimiento para convertirlas en hábito.</p></div>
+          <div class="tile"><h4>Aplicable a todos</h4><p class="muted">Espiritualidad secular: prácticas útiles sin etiquetas religiosas.</p></div>
+          <div class="tile"><h4>Medible y práctico</h4><p class="muted">Checklist, tablas y suggested journaling para ver progreso real.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contenido + Bonos -->
+    <section class="section" aria-labelledby="contenido-ebook">
+      <div class="container grid-2">
+        <div class="tile">
+          <h3 id="contenido-ebook" style="text-transform:uppercase;margin-bottom:6px">Contenido del e-book</h3>
+          <ul class="chapters muted">
+            <li>Introducción: cómo usar el método y medir avances.</li>
+            <li>Cap. 1: Fundamentos de energía y foco.</li>
+            <li>Cap. 2: Rutina de mañana (5–10 minutos).</li>
+            <li>Cap. 3: Pausas activas para la tarde.</li>
+            <li>Cap. 4: Enfoque láser en alta presión.</li>
+            <li>Cap. 5: Reset nocturno y sueño reparador.</li>
+            <li>Cap. 6: Plan de 30 días + checklist.</li>
+          </ul>
+        </div>
+        <div class="tile">
+          <h3 style="text-transform:uppercase;margin-bottom:6px">Bonos incluidos</h3>
+          <ul class="muted">
+            <li>Planificador de 30 días (PDF A4) — Próximamente.</li>
+            <li>Checklist diaria (PDF A4) — Próximamente.</li>
+          </ul>
+          <p class="muted" style="margin-top:8px">Los bonos se añadirán al paquete de descarga tras la compra.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonios -->
+    <section class="section" id="testimonios" aria-labelledby="testimonios-title">
+      <div class="container">
+        <h2 id="testimonios-title" style="text-transform:uppercase;margin-bottom:12px">Testimonios</h2>
+        <div class="snap" aria-label="Testimonios">
+          <div class="card"><strong>“En 3 semanas bajó mi reactividad y duermo mejor.”</strong><p class="muted" style="margin-top:6px">— Sandra, RR.HH.</p></div>
+          <div class="card"><strong>“Me dio una rutina simple para días exigentes.”</strong><p class="muted" style="margin-top:6px">— Carlos, Finanzas</p></div>
+          <div class="card"><strong>“Lo aplico entre reuniones, me mantiene enfocado.”</strong><p class="muted" style="margin-top:6px">— Andrés, Ventas</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="container">
+        <h2 id="faq-title" style="text-transform:uppercase;margin-bottom:12px">Preguntas frecuentes</h2>
+        <details><summary>¿Cuánto tiempo requiere?</summary><p class="muted">Entre 3 y 10 minutos al día. El plan propone 30 días para ver cambios acumulativos.</p></details>
+        <details><summary>¿Necesito experiencia previa?</summary><p class="muted">No. Es una guía secular con instrucciones paso a paso.</p></details>
+        <details><summary>¿Cómo recibo el e-book y los bonos?</summary><p class="muted">Tras la compra, llega un correo con el enlace de descarga inmediata.</p></details>
+        <details><summary>¿Puedo leerlo en el móvil?</summary><p class="muted">Sí, incluye versión optimizada para móvil y PDF imprimible.</p></details>
+      </div>
+    </section>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+    <!-- Compra -->
+    <section class="section" id="comprar" aria-labelledby="comprar-title">
+      <div class="container grid-2">
+        <div class="tile">
+          <h3 id="comprar-title" style="text-transform:uppercase;margin:0 0 8px">Obtén el e-book ahora</h3>
+          <p class="muted">Acceso inmediato + bonos. El checkout se activará cuando configures Hotmart / Payhip / Gumroad.</p>
+          <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
+            <button class="btn btn-buy js-buy" aria-label="Comprar ahora">COMPRAR AHORA</button>
+            <a class="btn btn-ghost" href="#faq">VER FAQ</a>
+          </div>
+
+          <div class="pay-logos" aria-hidden="true">
+            <!-- Placeholder logos -->
+            <div class="logo-svg" style="background:#0F2F4B;color:#fff;padding:12px 18px;border-radius:12px;font-weight:800">SSL</div>
+            <div class="logo-svg" style="background:#1A1F71;color:#fff;padding:12px 18px;border-radius:12px;font-weight:800">VISA</div>
+            <div class="logo-svg" style="background:#EB001B;color:#fff;padding:12px 18px;border-radius:12px;font-weight:800">MC</div>
+            <div class="logo-svg" style="background:linear-gradient(90deg,#003087,#009CDE);color:#fff;padding:12px 18px;border-radius:12px;font-weight:800">PayPal</div>
+          </div>
+
+          <div class="guarantee" style="margin-top:18px">
+            <div class="badge-wrap" aria-hidden="true" style="margin-right:12px">
+              <!-- small gold badge -->
+              <svg width="96" height="96" viewBox="0 0 180 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <defs><linearGradient id="g2" x1="0" x2="1"><stop offset="0" stop-color="#F59E0B"/><stop offset="1" stop-color="#FDE68A"/></linearGradient></defs>
+                <circle cx="90" cy="90" r="80" fill="#FFF7D6"/>
+                <circle cx="90" cy="90" r="70" stroke="url(#g2)" stroke-width="6" fill="#fff"/>
+                <text x="90" y="96" text-anchor="middle" font-family="Inter" font-weight="800" font-size="22" fill="#0F2F4B">7 DÍAS</text>
+              </svg>
+            </div>
+            <div>
+              <p class="muted" style="margin:0">Prueba el método 7 días. Si no notas mejora, te ayudamos a ajustar el protocolo o gestionamos reembolso según la plataforma de pago.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tile" aria-hidden="true">
+          <img src="./mockup.png" alt="Vista del e-book 10 Minutos de Poder" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <div class="divider" role="separator" aria-hidden="true"></div>
+
+  </main>
+
+  <footer role="contentinfo">
     <div class="container">
       <p>© 2025 Jaime Pascal • 10 Minutos de Poder</p>
       <p class="muted">Política de Privacidad • Términos • Contacto: tuemail@dominio.com</p>
@@ -337,18 +328,34 @@
   <a class="sticky-cta js-buy" href="#comprar" aria-label="Comprar ahora">COMPRAR AHORA</a>
 
   <script>
-    // Enlace de pago (pendiente hasta que lo tengas)
-    const CHECKOUT_URL = ""; // p.ej.: "https://hotmart.com/producto/abc123"
+    // Checkout URL (vacío por ahora). Cuando lo tengas, pega tu enlace de Hotmart / Payhip / Gumroad.
+    const CHECKOUT_URL = "";
 
     function goCheckout(e){
       e && e.preventDefault();
       if(CHECKOUT_URL){
-        window.open(CHECKOUT_URL,"_blank","noopener");
-      }else{
-        document.querySelector("#comprar").scrollIntoView({behavior:"smooth"});
+        // abrir en nueva pestaña para checkout externo
+        window.open(CHECKOUT_URL, '_blank', 'noopener');
+      } else {
+        // scroll a sección comprar si no hay link
+        document.querySelector('#comprar').scrollIntoView({behavior:'smooth'});
       }
     }
-    document.querySelectorAll(".js-buy").forEach(btn=>btn.addEventListener("click",goCheckout));
+
+    document.querySelectorAll('.js-buy, #ctaBuy, #topBuy, #buyAnchor').forEach(el=>{
+      if(el) el.addEventListener('click', goCheckout);
+    });
+
+    // Small enhancement: keyboard focus for skip link (accessibility)
+    (function(){
+      const firstBuy = document.querySelector('.js-buy');
+      if(firstBuy){
+        // nothing else needed, but we ensure focus-visible styles work
+        firstBuy.setAttribute('aria-haspopup','true');
+      }
+    })();
   </script>
+
 </body>
 </html>
+
