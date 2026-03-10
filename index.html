@@ -38,11 +38,11 @@
 
   <style>
     :root{
-      --bg:#F6F3FB;           /* fondo suave con tinte morado */
-      --accent:#0F2F4B;      /* azul profundo */
-      --muted:#4A5868;       /* gris-azulado */
+      --bg:#F6F3FB;
+      --accent:#0F2F4B;
+      --muted:#4A5868;
       --card:#FFFFFF;
-      --gold:#E0B24A;        /* dorado suave */
+      --gold:#E0B24A;
       --maxw:1100px;
       --radius:14px;
       --cta:#0B2545;
@@ -53,19 +53,53 @@
 
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;background:
-      radial-gradient(800px 400px at 10% 5%, rgba(139,92,246,0.04), transparent 20%),
-      radial-gradient(700px 320px at 95% 95%, rgba(96,165,250,0.03), transparent 20%),
-      var(--bg); color:var(--accent); -webkit-font-smoothing:antialiased;}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,Arial;
+      background:
+        radial-gradient(800px 400px at 10% 5%, rgba(139,92,246,0.04), transparent 20%),
+        radial-gradient(700px 320px at 95% 95%, rgba(96,165,250,0.03), transparent 20%),
+        var(--bg);
+      color:var(--accent);
+      -webkit-font-smoothing:antialiased;
+    }
     a{color:inherit;text-decoration:none}
     img{max-width:100%;height:auto;display:block;border-radius:8px}
 
-    /* Topbar */
-    .topbar{position:sticky;top:0;z-index:80;background:linear-gradient(180deg, rgba(250,250,252,0.95), rgba(250,250,252,0.85));backdrop-filter: blur(6px);border-bottom:1px solid rgba(13,41,69,0.04)}
-    .row{max-width:var(--maxw);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px}
-    .logo{font-family:"Bebas Neue", Inter; font-size:28px; color:var(--accent); letter-spacing:.02em}
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:80;
+      background:linear-gradient(180deg, rgba(250,250,252,0.95), rgba(250,250,252,0.85));
+      backdrop-filter: blur(6px);
+      border-bottom:1px solid rgba(13,41,69,0.04)
+    }
+    .row{
+      max-width:var(--maxw);
+      margin:0 auto;
+      padding:12px 20px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:12px
+    }
+    .logo{
+      font-family:"Bebas Neue", Inter;
+      font-size:28px;
+      color:var(--accent);
+      letter-spacing:.02em
+    }
     nav a{margin:0 10px;font-weight:600;color:var(--accent);opacity:.95}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;border-radius:999px;font-weight:800;cursor:pointer;border:0}
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 20px;
+      border-radius:999px;
+      font-weight:800;
+      cursor:pointer;
+      border:0
+    }
     .btn-buy{
       background: linear-gradient(90deg, var(--cta), #183458 60%);
       color:#fff;
@@ -76,63 +110,237 @@
     .btn-buy:hover{transform:translateY(-3px);box-shadow: 0 26px 64px rgba(11,28,43,0.24)}
     .btn-ghost{background:transparent;border:1px solid rgba(13,41,69,0.06);color:var(--accent)}
 
-    /* Container & sections */
     .container{max-width:var(--maxw);margin:0 auto;padding:0 20px}
     .section{padding:72px 0}
     .divider{height:1px;background:linear-gradient(90deg, rgba(13,41,69,0.04), rgba(13,41,69,0.02));margin:36px auto;border-radius:2px}
 
-    /* Hero */
     .hero{padding:64px 0}
     .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
-    @media (max-width:920px){ .hero-grid{grid-template-columns:1fr} .row{padding:10px} }
+    @media (max-width:920px){
+      .hero-grid{grid-template-columns:1fr}
+      .row{padding:10px}
+    }
 
-    h1{font-family:"Bebas Neue", Inter;font-size:clamp(36px,6vw,64px);margin:0;line-height:1;color:var(--accent);text-transform:uppercase}
-    .lead{margin:10px 0 18px;color:var(--muted);font-size:clamp(15px,2vw,17px);max-width:60ch}
-    .eyebrow{display:inline-block;background:var(--glass);border:1px solid rgba(13,41,69,0.04);padding:6px 12px;border-radius:999px;font-weight:700;color:var(--accent);font-size:13px}
+    h1{
+      font-family:"Bebas Neue", Inter;
+      font-size:clamp(36px,6vw,64px);
+      margin:0;
+      line-height:1;
+      color:var(--accent);
+      text-transform:uppercase
+    }
+    .lead{
+      margin:10px 0 18px;
+      color:var(--muted);
+      font-size:clamp(15px,2vw,17px);
+      max-width:60ch
+    }
+    .eyebrow{
+      display:inline-block;
+      background:var(--glass);
+      border:1px solid rgba(13,41,69,0.04);
+      padding:6px 12px;
+      border-radius:999px;
+      font-weight:700;
+      color:var(--accent);
+      font-size:13px
+    }
 
     .cta-group{display:flex;gap:12px;margin-top:12px;flex-wrap:wrap}
     .trust{margin-top:12px;color:var(--muted);font-size:14px;display:flex;gap:12px;flex-wrap:wrap}
 
-    .mock-card{background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.86)); border-radius:var(--radius); padding:18px; border:1px solid rgba(13,41,69,0.05); box-shadow: var(--shadow)}
+    .mock-card{
+      background: linear-gradient(180deg, rgba(255,255,255,0.95), rgba(255,255,255,0.86));
+      border-radius:var(--radius);
+      padding:18px;
+      border:1px solid rgba(13,41,69,0.05);
+      box-shadow: var(--shadow)
+    }
     .mock{border-radius:10px;display:block}
 
-    /* Tiles and grids */
     .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
-    @media (max-width:920px){ .grid-3,.grid-2{grid-template-columns:1fr} }
+    @media (max-width:920px){
+      .grid-3,.grid-2{grid-template-columns:1fr}
+    }
 
-    .tile{background:var(--card);border-radius:12px;padding:18px;box-shadow:0 10px 30px rgba(11,28,43,0.04);border:1px solid rgba(13,41,69,0.04)}
+    .tile{
+      background:var(--card);
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 10px 30px rgba(11,28,43,0.04);
+      border:1px solid rgba(13,41,69,0.04)
+    }
     .muted{color:var(--muted)}
     .pain li{margin:10px 0;color:var(--muted)}
     .chapters li{margin:8px 0;color:var(--muted)}
 
-    /* Testimonios - estilo crema vistoso */
     .snap{display:flex;gap:18px;overflow:auto;scroll-snap-type:x mandatory;padding-bottom:8px}
     .snap::-webkit-scrollbar{height:8px}
     .snap::-webkit-scrollbar-thumb{background:#d7dbe6;border-radius:999px}
-    .snap .card{scroll-snap-align:start;min-width:300px;flex:0 0 320px;background:linear-gradient(180deg,#fffaf6,#fffefc);border-radius:14px;padding:18px;box-shadow:0 16px 40px rgba(11,28,43,0.06);border:1px solid rgba(13,41,69,0.03)}
-
-    /* Guarantee - grande y vistosa */
-    .guarantee{
-      display:flex;gap:20px;align-items:center;padding:18px;border-radius:16px;background:linear-gradient(90deg, rgba(240,230,200,0.32), rgba(255,255,255,0.72));
-      border:1px solid rgba(13,41,69,0.06); box-shadow: 0 18px 48px rgba(224,178,74,0.06);
+    .snap .card{
+      scroll-snap-align:start;
+      min-width:300px;
+      flex:0 0 320px;
+      background:linear-gradient(180deg,#fffaf6,#fffefc);
+      border-radius:14px;
+      padding:18px;
+      box-shadow:0 16px 40px rgba(11,28,43,0.06);
+      border:1px solid rgba(13,41,69,0.03)
     }
-    .badge-large{width:160px;height:160px;flex:0 0 160px;border-radius:50%;display:flex;align-items:center;justify-content:center;background: radial-gradient(circle at 30% 25%, #fffaf0, #fff0d6);box-shadow:0 18px 48px rgba(224,178,74,0.18); border:6px solid rgba(224,178,74,0.95)}
-    .badge-large strong{display:block;font-size:28px;color:var(--accent);font-weight:900}
 
-    /* Pay logos more visual */
-    .pay-logos{display:flex;gap:14px;flex-wrap:wrap;align-items:center;margin-top:14px}
-    .logo-card{display:inline-flex;align-items:center;justify-content:center;padding:10px 14px;border-radius:10px;font-weight:800;color:#fff}
-    .logo-visa{background:linear-gradient(90deg,#102b7b,#1a3a8a)}
-    .logo-mc{background:linear-gradient(90deg,#f04c3f,#ffb366)}
-    .logo-pp{background:linear-gradient(90deg,#003087,#009CDE)}
-    .logo-ssl{background:linear-gradient(90deg,#0F2F4B,#183458)}
+    .guarantee{
+      display:flex;
+      gap:20px;
+      align-items:center;
+      padding:18px 20px;
+      border-radius:16px;
+      background:linear-gradient(90deg, rgba(250,248,240,0.98), #ffffff);
+      border:1px solid rgba(148,113,37,0.18);
+      box-shadow:0 22px 60px rgba(148,113,37,0.25);
+    }
+    .badge-large{
+      position:relative;
+      width:160px;
+      height:160px;
+      flex:0 0 160px;
+      clip-path:polygon(50% 0%,61% 6%,69% 3%,75% 11%,84% 9%,88% 18%,96% 18%,96% 28%,100% 34%,94% 41%,98% 50%,94% 59%,100% 66%,96% 72%,96% 82%,88% 82%,84% 91%,75% 89%,69% 97%,61% 94%,50% 100%,39% 94%,31% 97%,25% 89%,16% 91%,12% 82%,4% 82%,4% 72%,0% 66%,6% 59%,2% 50%,6% 41%,0% 34%,4% 28%,4% 18%,12% 18%,16% 9%,25% 11%,31% 3%,39% 6%);
+      background:conic-gradient(from 180deg,#fbbf24,#f59e0b,#f97316,#facc15,#fbbf24);
+      box-shadow:0 22px 55px rgba(148,113,37,0.6);
+    }
+    .badge-inner{
+      position:absolute;
+      inset:18px;
+      border-radius:50%;
+      background:radial-gradient(circle at 30% 20%,#fff7e6,#facc15);
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      justify-content:center;
+      text-align:center;
+      color:#1f2933;
+      font-weight:900;
+    }
+    .badge-inner span{
+      font-size:11px;
+      letter-spacing:0.08em;
+    }
+    .badge-inner strong{
+      font-size:26px;
+      line-height:1;
+    }
 
-    /* Sticky CTA */
-    .sticky-cta{position:fixed;left:50%;transform:translateX(-50%);bottom:18px;z-index:90;padding:12px 22px;border-radius:999px;background:linear-gradient(90deg,var(--cta),#193a5a);color:#fff;font-weight:900;display:none;box-shadow:0 22px 56px rgba(11,28,43,0.22)}
-    @media (max-width:900px){ .sticky-cta{display:inline-flex} }
+    .secure-box{
+      margin-top:18px;
+      display:flex;
+      align-items:center;
+      gap:20px;
+      padding:16px 20px;
+      border-radius:18px;
+      background:linear-gradient(90deg,#0F2F4B,#172b46);
+      color:#fff;
+      box-shadow:0 22px 55px rgba(4,12,26,0.55);
+    }
+    .secure-lock{
+      position:relative;
+      flex:0 0 96px;
+      height:96px;
+      border-radius:26px;
+      border:4px solid #facc15;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 18px 40px rgba(0,0,0,0.45);
+      background:radial-gradient(circle at 30% 20%,#fefce8,#fbbf24);
+    }
+    .secure-lock::before{
+      content:"";
+      position:absolute;
+      top:-40px;
+      width:60px;
+      height:60px;
+      border-radius:50%;
+      border:4px solid #facc15;
+      border-bottom:0;
+      background:transparent;
+    }
+    .secure-lock span{
+      font-weight:800;
+      letter-spacing:0.16em;
+      font-size:14px;
+      color:#92400e;
+    }
+    .secure-info h4{
+      margin:0 0 4px;
+      font-size:16px;
+      text-transform:uppercase;
+      letter-spacing:0.08em;
+    }
+    .secure-info p{
+      margin:0 0 10px;
+      font-size:13px;
+      opacity:.9;
+      max-width:40ch;
+    }
 
-    footer{border-top:1px solid rgba(13,41,69,0.04);padding:36px 0;color:var(--muted);text-align:center;font-size:14px}
+    .pay-logos{
+      display:flex;
+      gap:10px;
+      flex-wrap:wrap;
+      align-items:center;
+      margin-top:6px;
+    }
+    .logo-card{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:6px 10px;
+      border-radius:8px;
+      font-weight:800;
+      font-size:11px;
+      color:#fff;
+      min-width:64px;
+      box-shadow:0 10px 26px rgba(0,0,0,0.35);
+      letter-spacing:0.03em;
+    }
+    .logo-visa{background:linear-gradient(135deg,#0a2a7a,#1a4bb8)}
+    .logo-mc{background:radial-gradient(circle at 30% 50%,#eb001b 0,#eb001b 40%,#f79e1b 40%,#f79e1b 100%)}
+    .logo-pp{background:linear-gradient(135deg,#003087,#009cde)}
+    .logo-amex{background:linear-gradient(135deg,#0077a6,#00a8e6)}
+    .logo-ssl{background:linear-gradient(135deg,#047857,#10b981)}
+
+    .sticky-cta{
+      position:fixed;
+      left:50%;
+      transform:translateX(-50%);
+      bottom:18px;
+      z-index:90;
+      padding:12px 22px;
+      border-radius:999px;
+      background:linear-gradient(90deg,var(--cta),#193a5a);
+      color:#fff;
+      font-weight:900;
+      display:none;
+      box-shadow:0 22px 56px rgba(11,28,43,0.22)
+    }
+    @media (max-width:900px){
+      .sticky-cta{display:inline-flex}
+    }
+
+    footer{
+      border-top:1px solid rgba(13,41,69,0.04);
+      padding:36px 0;
+      color:var(--muted);
+      text-align:center;
+      font-size:14px
+    }
+    .legal{
+      font-size:12px;
+      color:var(--muted);
+      max-width:80ch;
+      margin:6px auto 0;
+      line-height:1.5;
+    }
 
     :focus-visible{outline:3px solid rgba(224,178,74,0.18);outline-offset:3px}
   </style>
@@ -163,11 +371,10 @@
 
           <div class="cta-group" role="group" aria-label="Acciones principales">
             <button class="btn btn-buy" id="ctaBuy">COMPRAR AHORA</button>
-            <!-- Ver contenido eliminado por decisión del autor -->
           </div>
 
           <div class="trust" aria-hidden="true">
-            <span>✅ Pago seguro</span> • <span>⚡ Acceso inmediato</span> • <span>✉️ Soporte por email</span>
+            <span>✅ Pago seguro vía Hotmart</span> • <span>⚡ Acceso inmediato</span> • <span>✉️ Soporte por email</span>
           </div>
         </div>
 
@@ -181,7 +388,10 @@
     <section class="section" aria-labelledby="portada-title" style="padding-top:24px">
       <div class="container grid-2" style="align-items:center">
         <div class="tile" aria-hidden="false" style="display:flex;align-items:center;justify-content:center">
-          <img src="./cover-book-vertical.png" alt="Portada del e-book 10 Minutos de Poder" loading="lazy" style="max-width:320px;border-radius:10px;box-shadow:0 22px 60px rgba(11,28,43,0.08)">
+          <img src="https://jpascal7.github.io/10-MINUTOS-DE-PODER-WEB/cover-book-vertical.png"
+               alt="Portada del e-book 10 Minutos de Poder"
+               loading="lazy"
+               style="max-width:320px;border-radius:10px;box-shadow:0 22px 60px rgba(11,28,43,0.08)">
         </div>
         <div>
           <h2 id="portada-title" style="text-transform:uppercase;margin:0 0 8px">Una guía clara y medible</h2>
@@ -238,11 +448,11 @@
       </div>
     </section>
 
-    <!-- Contenido real del e-book (según lo proporcionado) -->
+    <!-- Contenido real del e-book -->
     <section class="section" aria-labelledby="contenido-ebook">
       <div class="container grid-2">
         <div class="tile">
-          <h3 id="contenido-ebook" style="text-transform:uppercase;margin-bottom:6px">Qué Encontrarás en los Próximos Capítulos</h3>
+          <h3 id="contenido-ebook" style="text-transform:uppercase;margin-bottom:6px">Qué encontrarás en los próximos capítulos</h3>
           <p class="muted">Este libro está estructurado como un manual de implementación, no como un tratado filosófico:</p>
           <ul class="chapters muted" style="margin-top:10px">
             <li><strong>Capítulo 1: Diagnóstico Express</strong> – Identifica exactamente dónde pierdes energía mental durante tu día típico.</li>
@@ -259,11 +469,12 @@
         <div class="tile">
           <h3 style="text-transform:uppercase;margin-bottom:6px">Bonos incluidos</h3>
           <ul class="muted">
-            <li><strong>Planificador de 30 días (PDF A4)</strong> — Plantilla para seguimiento diario y revisión semanal.</li>
-            <li><strong>Checklist Matutino Express (PDF A4)</strong> — Versión resumida de la práctica de 5 minutos.</li>
-            <li><strong>Audios Guiados (3 tracks)</strong> — Enfoque matutino 3 min, Reset energético 2 min, Cierre nocturno 4 min.</li>
+            <li><strong>Planificador Diario de Energía &amp; Enfoque</strong> — Upgrade Plus Premium · 30 días de presencia y alto rendimiento (formato PDF A4 y versión optimizada para móvil).</li>
+            <li><strong>Checklist Matutino Express</strong> — Upgrade Plus Premium · Implementación en 30 días (formato PDF A4 y versión optimizada para móvil).</li>
           </ul>
-          <p class="muted" style="margin-top:10px">Estos bonos se entregan en formato digital junto con el e-book (PDF y audio). Si quieres, te creo los PDFs y los audios en un paquete listo para subir a la plataforma.</p>
+          <p class="muted" style="margin-top:10px">
+            Estos bonos se entregan en formato digital junto con el e-book, a través de tu acceso privado en Hotmart inmediatamente después de completar la compra.
+          </p>
         </div>
       </div>
     </section>
@@ -276,15 +487,15 @@
         <h2 id="testimonios-title" style="text-transform:uppercase;margin-bottom:12px">Testimonios</h2>
         <div class="snap" aria-label="Testimonios">
           <div class="card">
-            <strong>“En 3 semanas bajó mi reactividad y duermo mejor.”</strong>
+            <strong>"En 3 semanas bajó mi reactividad y duermo mejor."</strong>
             <p class="muted" style="margin-top:8px">— Sandra, RR.HH.</p>
           </div>
           <div class="card">
-            <strong>“Me dio una práctica simple para días exigentes.”</strong>
+            <strong>"Me dio una práctica simple para días exigentes."</strong>
             <p class="muted" style="margin-top:8px">— Carlos, Finanzas</p>
           </div>
           <div class="card">
-            <strong>“Lo aplico entre reuniones; me mantiene enfocado.”</strong>
+            <strong>"Lo aplico entre reuniones; me mantiene enfocado."</strong>
             <p class="muted" style="margin-top:8px">— Andrés, Ventas</p>
           </div>
         </div>
@@ -295,10 +506,24 @@
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="container">
         <h2 id="faq-title" style="text-transform:uppercase;margin-bottom:12px">Preguntas frecuentes</h2>
-        <details><summary>¿Cuánto tiempo requiere?</summary><p class="muted">Entre 3 y 10 minutos al día. El plan propone 30 días para ver cambios acumulativos.</p></details>
-        <details><summary>¿Necesito experiencia previa?</summary><p class="muted">No. Es una guía secular con instrucciones paso a paso.</p></details>
-        <details><summary>¿Cómo recibo el e-book y los bonos?</summary><p class="muted">Tras la compra, llega un correo con el enlace de descarga inmediata (o descarga directa desde la plataforma que uses).</p></details>
-        <details><summary>¿Puedo leerlo en el móvil?</summary><p class="muted">Sí, incluye versión optimizada para móvil y PDF imprimible.</p></details>
+        <details>
+          <summary>¿Cuánto tiempo requiere?</summary>
+          <p class="muted">Entre 3 y 10 minutos al día. El plan propone 30 días para ver cambios acumulativos.</p>
+        </details>
+        <details>
+          <summary>¿Necesito experiencia previa?</summary>
+          <p class="muted">No. Es una guía secular con instrucciones paso a paso.</p>
+        </details>
+        <details>
+          <summary>¿Cómo recibo el e-book y los bonos?</summary>
+          <p class="muted">
+            Tras la compra en Hotmart, recibirás un correo con tu acceso al área privada donde podrás descargar el e-book y los bonos en formato digital.
+          </p>
+        </details>
+        <details>
+          <summary>¿Puedo leerlo en el móvil?</summary>
+          <p class="muted">Sí, incluye versión optimizada para móvil y PDF imprimible.</p>
+        </details>
       </div>
     </section>
 
@@ -309,31 +534,47 @@
       <div class="container grid-2">
         <div class="tile">
           <h3 id="comprar-title" style="text-transform:uppercase;margin:0 0 8px">Obtén el e-book ahora</h3>
-          <p class="muted">Acceso inmediato + bonos incluidos. El checkout se activará cuando configures Hotmart / Payhip / Gumroad.</p>
+          <p class="muted">
+            Acceso inmediato a través de Hotmart + bonos incluidos. El pago se procesa con cifrado SSL y métodos de pago habituales (tarjeta, PayPal y otros disponibles según tu país).
+          </p>
 
           <div style="margin-top:12px;display:flex;gap:12px;flex-wrap:wrap">
             <button class="btn btn-buy js-buy" aria-label="Comprar ahora">COMPRAR AHORA</button>
             <a class="btn btn-ghost" href="#faq">VER FAQ</a>
           </div>
 
-          <div class="pay-logos" aria-hidden="true">
-            <!-- VISA -->
-            <div class="logo-card logo-visa" title="Visa">VISA</div>
-            <!-- Mastercard -->
-            <div class="logo-card logo-mc" title="Mastercard">MASTERCARD</div>
-            <!-- PayPal -->
-            <div class="logo-card logo-pp" title="PayPal">PayPal</div>
-            <!-- SSL -->
-            <div class="logo-card logo-ssl" title="SSL">SSL</div>
+          <!-- Bloque de compra segura -->
+          <div class="secure-box" aria-label="Compra segura">
+            <div class="secure-lock" aria-hidden="true">
+              <span>SSL</span>
+            </div>
+            <div class="secure-info">
+              <h4>COMPRA SEGURA</h4>
+              <p>Tus datos se procesan a través de Hotmart con cifrado SSL y pasarelas de pago reconocidas.</p>
+              <div class="pay-logos" aria-hidden="true">
+                <div class="logo-card logo-pp" title="PayPal">PAYPAL</div>
+                <div class="logo-card logo-mc" title="Mastercard">MASTERCARD</div>
+                <div class="logo-card logo-visa" title="Visa">VISA</div>
+                <div class="logo-card logo-amex" title="American Express">AMEX</div>
+                <div class="logo-card logo-ssl" title="Transacción cifrada">CIFRADO SSL</div>
+              </div>
+            </div>
           </div>
 
-          <div class="guarantee" style="margin-top:18px">
+          <!-- Garantía -->
+          <div class="guarantee" style="margin-top:22px">
             <div class="badge-large" aria-hidden="true">
-              <strong>7 DÍAS</strong>
+              <div class="badge-inner">
+                <span>GARANTÍA</span>
+                <strong>7 DÍAS</strong>
+                <span>DE PRUEBA</span>
+              </div>
             </div>
             <div>
-              <p style="margin:0;font-weight:700;color:var(--accent)">Garantía de satisfacción</p>
-              <p class="muted" style="margin-top:6px">Prueba el método 7 días. Si no notas mejora, te ayudamos a ajustar el protocolo o gestionamos reembolso según la plataforma de pago.</p>
+              <p style="margin:0;font-weight:700;color:var(--accent)">Tu paz primero. Tu transformación también.</p>
+              <p class="muted" style="margin-top:6px">
+                Prueba el método durante 7 días. Si sientes que este e-book no es para ti, podrás solicitar reembolso completo dentro del plazo de garantía según las políticas de Hotmart.
+              </p>
             </div>
           </div>
         </div>
@@ -351,7 +592,19 @@
   <footer role="contentinfo">
     <div class="container">
       <p>© 2025 Jaime Pascal • 10 Minutos de Poder</p>
-      <p class="muted">Política de Privacidad • Términos • Contacto: tuemail@dominio.com</p>
+      <p class="muted">Política de Privacidad • Términos y Condiciones • Contacto: Jaime.pascal@yahoo.es</p>
+      <p class="legal">
+        Descargo de responsabilidad: Este e-book y sus materiales complementarios se ofrecen con fines exclusivamente informativos y educativos. No sustituyen la consulta con profesionales de la salud física o mental, ni constituyen asesoría financiera, legal o psicológica. Los resultados pueden variar de una persona a otra y no se garantizan resultados específicos.
+      </p>
+      <p class="legal">
+        Los testimonios y casos mencionados reflejan experiencias personales y no representan promesas de éxito. Cada lector es responsable del uso que haga de la información aquí presentada.
+      </p>
+      <p class="legal">
+        Todo el contenido de "10 Minutos de Poder" (textos, diseños, ejercicios y materiales descargables) está protegido por las leyes de propiedad intelectual. Queda prohibida su reproducción, distribución, comunicación pública o transformación, total o parcial, sin autorización previa y por escrito del autor.
+      </p>
+      <p class="legal">
+        Al acceder a este sitio y/o adquirir el e-book aceptas estas condiciones, así como lo establecido en la política de privacidad y en los términos y condiciones aplicables.
+      </p>
     </div>
   </footer>
 
@@ -359,8 +612,7 @@
   <a class="sticky-cta js-buy" href="#comprar" aria-label="Comprar ahora">COMPRAR AHORA</a>
 
   <script>
-    // Checkout URL (vacío por ahora). Pegas tu enlace cuando lo tengas.
-    const CHECKOUT_URL = "";
+    const CHECKOUT_URL = "https://pay.hotmart.com/I103284534E";
 
     function goCheckout(e){
       if(e) e.preventDefault();
@@ -371,15 +623,16 @@
       }
     }
 
-    // Asigna evento a botones
     document.querySelectorAll('.js-buy, #ctaBuy, #topBuy, #buyAnchor').forEach(el=>{
       if(el) el.addEventListener('click', goCheckout);
     });
 
-    // Pequeño ajuste: focus a primer CTA si llega con ?comprar
     (function(){
       if(location.search.indexOf('comprar')>-1){
-        setTimeout(()=>{ document.querySelector('#ctaBuy') && document.querySelector('#ctaBuy').focus(); }, 600);
+        setTimeout(()=>{
+          const btn = document.querySelector('#ctaBuy');
+          if(btn) btn.focus();
+        }, 600);
       }
     })();
   </script>
